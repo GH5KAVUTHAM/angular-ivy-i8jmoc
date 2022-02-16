@@ -121,6 +121,9 @@ app-top-bar h1 {
   color: white;
   margin: 0;
 }
+app-product-list {
+  background-color: rgba(19, 255, 224, 0.452);
+}
 
 /* Checkout Cart, Shipping Prices */
 
