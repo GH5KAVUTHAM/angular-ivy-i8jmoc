@@ -12,6 +12,9 @@ export class ProductListComponent implements OnInit {
   addToCart() {
     window.alert('The product has been added!');
   }
+  onnotify(){
+    window.alert('Notify me')
+  }
   constructor() { }
 
   ngOnInit() {

@@ -25,4 +25,5 @@
       </h3>
           <p *ngIf="product.price">Price : {{product.price}}</p>
           <button type="button" (click)="addToCart()" >Add</button>
+          <app-product-alert [productInside]="product" (notify)="onnotify()"></app-product-alert>
           
