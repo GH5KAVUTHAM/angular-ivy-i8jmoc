@@ -1,6 +1,4 @@
-<p>
-product-list works!
-</p>
+
 
 <table class="table table-dark table-striped" style="width:500px">
 <tr>
@@ -18,3 +16,12 @@ product-list works!
   <td>{{product.expiryDate}}</td>
 </tr>
 </table>
+
+<div *ngFor="let product of products">
+  <h3>
+    <a [title]="product.productName " >
+      {{product.productName}}
+    </a>
+      </h3>
+          <p *ngIf="product.price">Price : {{product.price}}</p>
+          <button type="button" (click)="addToCart()">Add</button>

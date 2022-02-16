@@ -8,6 +8,10 @@ import { productFromList } from '../products';
 })
 export class ProductListComponent implements OnInit {
   products = productFromList;
+
+  addToCart() {
+    window.alert('The product has been added!');
+  }
   constructor() { }
 
   ngOnInit() {
