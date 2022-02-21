@@ -7,13 +7,19 @@ import { RouterModule } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductAlertComponent } from './product-alert/product-alert.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,RouterModule.forRoot([
-    {path:'',component:ProductListComponent}
+    {path:'',component:ProductListComponent},
+    {path:'products/productId',component: ProductDetailsComponent}
   ]) ],
-  declarations: [ AppComponent, TopBarComponent,  ProductListComponent,ProductAlertComponent],
+  declarations: [ AppComponent, TopBarComponent,
+      ProductListComponent, 
+      ProductAlertComponent,
+    ProductDetailsComponent,
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
