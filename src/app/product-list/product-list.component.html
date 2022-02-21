@@ -20,7 +20,8 @@
 
 <div *ngFor="let product of products">
   <h3>
-    <a [title]="product.productName " >
+    <a [title]="product.productName "
+    [routerLink] >
       {{product.productName}}
     </a>
       </h3>
