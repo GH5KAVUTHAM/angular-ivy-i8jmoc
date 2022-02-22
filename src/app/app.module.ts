@@ -23,3 +23,4 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
+
