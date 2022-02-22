@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { productFromList } from '../products';
+import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../cart.service';
+import { ProductDetailsComponent } from '../product-details/product-details.component';
+import { product, productFromList } from '../products';
 
 @Component({
   selector: 'app-product-list',
@@ -8,14 +11,18 @@ import { productFromList } from '../products';
 })
 export class ProductListComponent implements OnInit {
   products = productFromList;
-
+  constructor(
+    private route: ActivatedRoute,
+    private cartService: CartService
+  ) { }
   addToCart() {
-    window.alert('The product has been added!');
+    // this.cartService.addToCart(Product);
+    window.alert('Product added to cart!');
   }
   onnotify(){
     window.alert('Notify me')
   }
-  constructor() { }
+
 
   ngOnInit() {
   }
