@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  items = this.cartService.getItems();
+  checkoutForm = this.formBuilder.group({
+    
+  })
+  constructor(
+    private cartService: CartService,
+    private formBuilder: FormBuilder
+  ) {}
+ngOnInit(): void {
+throw new Error('Method not implemented.');
+}
+ onSubmit(): void {
+   alert('submitted')
+   this.items = this.cartService.clearCart();
+   console.log('ORDER SUBMITTED');
+   this.checkoutForm.reset();
+ }
 }
