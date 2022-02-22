@@ -9,6 +9,7 @@ import{product,productFromList} from '../products';
 })
 export class ProductDetailsComponent implements OnInit {
   product: product | undefined
+cartService: any;
 
   constructor(
     private route: ActivatedRoute
@@ -20,6 +21,11 @@ export class ProductDetailsComponent implements OnInit {
     this.product = productFromList.find(
      ( product) =>product.productId === productIdFromRoute
     );
+  }
+
+  addToCart(product: product) {
+    this.cartService.addToCart(product);
+    window.alert('Product added to cart!');
   }
 
 }
