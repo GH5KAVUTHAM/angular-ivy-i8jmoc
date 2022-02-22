@@ -13,7 +13,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 @NgModule({
   imports:      [ BrowserModule, FormsModule,RouterModule.forRoot([
     {path:'',component:ProductListComponent},
-    {path:'product/:productId',component: ProductDetailsComponent}
+    {path:'product/:productId',component: ProductDetailsComponent},
   ]) ],
   declarations: [ AppComponent, TopBarComponent,
       ProductListComponent, 
