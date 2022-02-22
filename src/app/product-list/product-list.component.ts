@@ -15,8 +15,8 @@ export class ProductListComponent implements OnInit {
     private route: ActivatedRoute,
     private cartService: CartService
   ) { }
-  addToCart() {
-    // this.cartService.addToCart(Product);
+  addToCart(product: product) {
+    this.cartService.addToCart(product);
     window.alert('Product added to cart!');
   }
   onnotify(){
